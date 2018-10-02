@@ -1,0 +1,10 @@
+<li [ngClass]="{'list-group-item': true, 'list-group-item-success': isLoved(), 'list-group-item-danger': isHated()}">
+    <h4>{{post.title}}</h4>
+    <p>{{post.content}}</p>
+    <p *ngIf="post.loveIts">Was loved by {{post.loveIts}} people</p>
+    <p *ngIf="post.dontLoveIts">Was not loved by {{post.dontLoveIts}} people</p>
+    <button class="btn btn-success" (click)="loveIt()">Love it!</button>
+    <button class="btn btn-danger" (click)="dontLoveIt()">Don't love it!</button>
+    <button class="btn btn-default" (click)="resetLoves()">Reset</button>
+    <button class="btn btn-danger pull-right" (click)="deletePost(index)">Supprimer</button>
+</li>

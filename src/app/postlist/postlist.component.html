@@ -1,0 +1,8 @@
+<div *ngIf="posts">
+    <h1>
+        Welcome to Blog !
+    </h1>
+    <ul class="list-group">
+        <app-postlistitem *ngFor="let post of posts;let i = index" [index]="i" [post]="post"></app-postlistitem>
+    </ul>
+</div>
